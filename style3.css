@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+#car1{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(20, 220, 137);
+    position: absolute;
+  top: 30%;
+  left: 30%;
+}
+#car2{
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+    position:absolute;
+    top: 20%;
+  left: 20%;
+}
+#car3{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    position:absolute;
+    top: 10%;
+  left: 10%;
+}
