@@ -1,17 +1,31 @@
-
-body{
-    background-color: white;
-    color:black;
+button{
+    background-color: aqua;
+    color: red;
+    transition: all ease-in 3s;
 }
-p{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style:italic;
-    font-weight: 1000;
-    line-height: 100px;
-    word-spacing: 25px;
-    text-align: right;
-    text-transform: uppercase;
-    text-decoration: overline;
-    text-shadow: 10px, 10pc;
+body{
+    background-color: black;
+    color: white;
+}
+button:hover{
+    background-color: pink;
+}
+input:focus{
+    color: purple;
+}
+li::after{
+    content:">";
+}
+button:active{
+    color: yellow;
+}
+.box{
+    height: 150px;
+    width: 100px;
+    background-color: red;
 
+}
+.box:hover{
+    transform: scale(1.5);
+    transform: skew(10deg,20deg);
 }
