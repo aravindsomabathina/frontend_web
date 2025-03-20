@@ -1,31 +1,13 @@
-button{
-    background-color: aqua;
-    color: red;
-    transition: all ease-in 3s;
+.parent{
+    height: 400px;
+    width: 400px;
+    background-color: blue;
 }
-body{
-    background-color: black;
-    color: white;
-}
-button:hover{
-    background-color: pink;
-}
-input:focus{
-    color: purple;
-}
-li::after{
-    content:">";
-}
-button:active{
-    color: yellow;
-}
-.box{
-    height: 150px;
-    width: 100px;
-    background-color: red;
+@media(max-width:600px){
+    .parent{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
 
-}
-.box:hover{
-    transform: scale(1.5);
-    transform: skew(10deg,20deg);
 }
