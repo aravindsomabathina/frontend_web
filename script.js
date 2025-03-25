@@ -1,4 +1,9 @@
-console.log("hello world")
-console.warn("why are you late")
-console.error("Aravind syntax")
-prompt("what is your name ")
+var a=12;
+var b=a;
+console.log(a);
+console.log(b+2);
+var aravind=[1,2,3];
+var vinay = [...aravind];
+vinay.pop();
+console.log(aravind);
+console.log(vinay);
