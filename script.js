@@ -1,47 +1,57 @@
-//****************************  MAP  *****************************************
-var arr = [1,2,3,4];
-var ans = arr.map(function(value){
-    return 12;
+//******************************closure functions********************** */
+
+function abcd() {
+    let a=12;
+    return function(){
+        console.log(a);
+    }
+}
+abcd()();
+
+
+//create a function that takes anoter function as an argument and calls it after 5 seconds
+//----------------------------------------------------------------------------------------------------
+
+function callerfunc(Aravind){
+    setTimeout(Aravind,5000);
+}
+
+callerfunc(function(){
+    console.log("hello");
 })
-console.log(ans);
 
 
+// write a function that uses closures to create a counter
+//----------------------------------------------------------------------------------------------
 
-//*****************************  FILTER **************************************
+function counter(){
+    let counter = 0;
+    return function(){
+        counter++;
+        console.log(counter);
 
-var arr = [1,2,3,4];
-var ans = arr.filter(function(value){
-    return value>2;
-})
-console.log(ans);
-
-
-//*****************************  REDUCE   ***********************************
-
-var arr = [1,2,3,4];
-var ans = arr.reduce(function(accumulator, key){
-    return accumulator+key;
-}, 0);
-console.log(ans);
+    }
+}
+var fn=counter();
+fn();
+fn();
+fn();
 
 
-//Remove duplicate elements from the array
-//-----------------------------------------------------------------------------------
-
-var arr=[1,1,2,2,3,3,4,5,6,7];
-var ans=[...new Set(arr)];
-console.log(ans);
-
-
-//second largest element in an array
+//implement a function that limits how many times another function can be called
 //---------------------------------------------------------------------------------------------
 
 
-var arr=[1,1,2,2,3,3,4,5,6,7];
-var ans=[...new Set(arr)];
-var newarr= ans.sort(function(a,b){
-    return b-a;
-
-});
-console.log(newarr[1]);
+function fnlimiter(fn, limit){
+    let totalcalled=0;
+    return function(){
+        if(totalcalled < limit){
+            totalcalled++;
+            fn();
+        }
+    }
+}
+let limiter = fnlimiter(function(){
+    console.log("hey")
+},3);
 
